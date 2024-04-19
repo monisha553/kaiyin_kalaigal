@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/sellerbasicdetails.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/widgets/AppBar.dart';
 
 import '../../../core/utils/widgets/app_color.dart';
@@ -68,7 +69,7 @@ class _ProfileState extends State<Profile> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Hii Kavi, Welcome back",
+                    "Hii Yazhini, Welcome back",
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
@@ -162,23 +163,33 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 height: 20,
               ),
-              Row(
+          GestureDetector(
+            onTap: () {
+              // Navigate to the next page here
+              // Example:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SellerBasicDetails()),
+              );
+            },
+            child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Favourites",
+                    "SELLER",
                     style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: AppColor.appMainColor),
                   ),
                   Icon(
-                    Icons.favorite_outlined,
+                    Icons.shop,
                     size: 40,
                   ),
                 ],
               ),
+          ),
               SizedBox(
                 height: 20,
               ),

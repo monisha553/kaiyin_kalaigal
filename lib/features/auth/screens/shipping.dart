@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/DeliverTo.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/widgets/CustomTextField.dart';
 import '../../../core/utils/widgets/app_color.dart';
 
 class ShippingDetails extends StatefulWidget {
@@ -30,7 +31,16 @@ class _ShippingDetailsState extends State<ShippingDetails> {
                   children: [
                     SizedBox(width: 40),
                     Text(
-                      "Kaiyin Kalaigal",
+                      "Kaiyin",
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: AppColor.buttonColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 2),
+                    Text(
+                      "Kalaigal",
                       style: TextStyle(
                         fontSize: 20,
                         color: AppColor.whiteColor,
@@ -42,7 +52,7 @@ class _ShippingDetailsState extends State<ShippingDetails> {
                       height: 90,
                       width: 80,
                       child: Image.asset(
-                        "assets/images/ordersummarylogo.png",
+                        "assets/images/white logo.png",
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -73,47 +83,23 @@ class _ShippingDetailsState extends State<ShippingDetails> {
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Enter your Name',
-                              labelStyle: TextStyle(fontSize: 16),
-                              filled: true,
-                              fillColor: AppColor.buttonColor,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
+                          child: CustomTextField(
+                            hintText: "Enter your name",
                           ),
                         ),
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
+                          child: CustomTextField(
+                            hintText: "Phone Number",
                             keyboardType: TextInputType.phone,
-                            decoration: InputDecoration(
-                              labelText: 'Phone number',
-                              labelStyle: TextStyle(fontSize: 16),
-                              filled: true,
-                              fillColor: AppColor.buttonColor,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
                           ),
                         ),
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Pincode',
-                              labelStyle: TextStyle(fontSize: 16),
-                              filled: true,
-                              fillColor: AppColor.buttonColor,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
+                          child: CustomTextField(
+                            hintText: "Pincode",
                           ),
                         ),
                         SizedBox(height: 20),
@@ -124,31 +110,15 @@ class _ShippingDetailsState extends State<ShippingDetails> {
                             children: [
                               Flexible(
                                 flex: 2,
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    labelText: 'State',
-                                    labelStyle: TextStyle(fontSize: 16),
-                                    filled: true,
-                                    fillColor: AppColor.buttonColor,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-                                    ),
-                                  ),
+                                child: CustomTextField(
+                                  hintText: "City",
                                 ),
                               ),
                               SizedBox(width: 20),
                               Flexible(
                                 flex: 3,
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    labelText: 'City',
-                                    labelStyle: TextStyle(fontSize: 16),
-                                    filled: true,
-                                    fillColor: AppColor.buttonColor,
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-                                    ),
-                                  ),
+                                child: CustomTextField(
+                                  hintText: "State",
                                 ),
                               ),
                             ],
@@ -157,31 +127,15 @@ class _ShippingDetailsState extends State<ShippingDetails> {
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'House No,Building Name',
-                              labelStyle: TextStyle(fontSize: 16),
-                              filled: true,
-                              fillColor: AppColor.buttonColor,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
+                          child: CustomTextField(
+                            hintText: "House No.,Building Name",
                           ),
                         ),
                         SizedBox(height: 20),
                         Padding(
                           padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: TextField(
-                            decoration: InputDecoration(
-                              labelText: 'Rode name,Area,Colony',
-                              labelStyle: TextStyle(fontSize: 16),
-                              filled: true,
-                              fillColor: AppColor.buttonColor,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                            ),
+                          child: CustomTextField(
+                            hintText: "Road name,Area,Colony",
                           ),
                         ),
                     SizedBox(height: 30),

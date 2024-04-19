@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/home.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/login.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/widgets/CustomTextField.dart';
 
 import '../../../core/utils/widgets/app_color.dart';
 
@@ -87,17 +88,8 @@ class _SignUpState extends State<SignUp> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    TextField(
-                                      decoration: InputDecoration(
-                                        labelText: 'Enter your email',
-                                        filled: true,
-                                        fillColor: AppColor.buttonColor,
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                      ),
-                                    ),
+                                    CustomTextField(hintText: "Enter your email",
+                                    keyboardType: TextInputType.emailAddress,),
                                     SizedBox(
                                       height: 5,
                                     ),
@@ -110,16 +102,9 @@ class _SignUpState extends State<SignUp> {
                                     SizedBox(
                                       height: 5,
                                     ),
-                                    TextField(
-                                      obscureText: true,
-                                      decoration: InputDecoration(
-                                        filled: true,
-                                        fillColor: AppColor.buttonColor,
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                      ),
+                                    CustomTextField(
+                                      obscureText: true, hintText: 'Enter your password',
+
                                     ),
                                     SizedBox(
                                       height: 5,
@@ -133,17 +118,7 @@ class _SignUpState extends State<SignUp> {
                                     SizedBox(
                                       height: 10,
                                     ),
-                                    TextField(
-                                      obscureText: true,
-                                      decoration: InputDecoration(
-                                        filled: true,
-                                        fillColor: AppColor.buttonColor,
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                      ),
-                                    ),
+                                    CustomTextField(hintText: 'Repeat Password',obscureText: true,),
                                     SizedBox(
                                       height: 20,
                                     ),

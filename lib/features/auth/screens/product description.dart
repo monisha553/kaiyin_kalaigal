@@ -102,95 +102,104 @@ class _ProdectDescriptionState extends State<ProdectDescription> {
                 height: 10,
               ),
               Container(
-                child: Column(
-                  children: [
-                    Align(
-                      alignment: Alignment.center,
-                      child: Image.asset(
-                        'assets/images/jewellery/j4.png',
-                        fit: BoxFit.cover,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.center,
+                        child: Image.asset(
+                          'assets/images/jewellery/j4.png',
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20.h),
-                    Align(
-                        alignment: Alignment.bottomLeft,
-                        child: Text(
-                          "Black and Brown \nteardrop Earrings",
-                          style: TextStyle(fontSize: 30),
-                        )),
-                    SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Align(
-                            alignment: Alignment.bottomLeft,
+                      SizedBox(height: 20.h),
+                      Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              "Rs.550",
-                              style: TextStyle(fontSize: 20),
-                            )),
-////// pending code
-                      ],
-                    ),
-                    SizedBox(height: 20),
-                    Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              "Black and Brown \nteardrop Earrings",
+                              style: TextStyle(fontSize: 30),
+                            ),
+                          )),
+                      SizedBox(height: 20),
+                      Row(
                         children: [
-                          ElevatedButton.icon(
-                              onPressed: () {
-                                Navigator.push(
+                          Align(
+                              alignment: Alignment.bottomLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Rs.550",
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              )),
+                  ////// pending code
+                        ],
+                      ),
+                      SizedBox(height: 20),
+                      Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ElevatedButton.icon(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => OrderSummary(),
+                                    ),
+                                  );
+                                },
+                                icon: Icon(Icons.shopping_bag),
+                                label: Text(
+                                  'Buy Now',
+                                  style: TextStyle(color: AppColor.blackColor),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColor.buttonColor,
+                                )),
+                            SizedBox(width: 20),
+                            ElevatedButton.icon(
+                                onPressed: ()   { //need to change his code to add to cart page
+                                  Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) => OrderSummary(),
                                   ),
                                 );
-                              },
-                              icon: Icon(Icons.shopping_bag),
-                              label: Text(
-                                'Buy Now',
-                                style: TextStyle(color: AppColor.blackColor),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: AppColor.buttonColor,
-                              )),
-                          SizedBox(width: 20),
-                          ElevatedButton.icon(
-                              onPressed: ()   { //need to change his code to add to cart page
-                                Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => OrderSummary(),
+                                  },
+                                icon: Icon(Icons.add_shopping_cart_rounded),
+                                label: Text(
+                                  'Add to Cart',
+                                  style: TextStyle(color: AppColor.blackColor),
                                 ),
-                              );
-                                },
-                              icon: Icon(Icons.add_shopping_cart_rounded),
-                              label: Text(
-                                'Add to Cart',
-                                style: TextStyle(color: AppColor.blackColor),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: AppColor.buttonColor,
-                              )),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColor.buttonColor,
+                                )),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 40),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.favorite_border,
+                          ),
+                          Text(
+                            'ADD TO WISHLIST',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.black,
+                            ),
+                          ),
                         ],
                       ),
-                    ),
-                    SizedBox(height: 20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.favorite_border,
-                        ),
-                        Text(
-                          'ADD TO WISHLIST',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ]),

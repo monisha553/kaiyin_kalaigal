@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/addtocart.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/home.dart';
 import '../../../../core/utils/widgets/app_color.dart';
+import '../sellerbasicdetails.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({required Key key}) : super(key: key);
@@ -11,7 +13,8 @@ class CustomBottomNavigationBar extends StatefulWidget {
 
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   int _selectedIndex = 0;
-  // List pages=[HomePage()]
+
+  List<Widget> _mylist =const[HomePage(),SellerBasicDetails(),AddToCart()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -22,6 +25,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body:  _mylist[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: AppColor.buttonColor,
         items: <BottomNavigationBarItem>[
@@ -33,14 +37,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
             icon: Icon(Icons.shop, size: 40),
             label: 'SELL',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shop, size: 40),
-            label: 'Shop',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu, size: 40),
-            label: 'CATEGORIES',
-          ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart, size: 40),
             label: 'CART',

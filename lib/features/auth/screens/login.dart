@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/home.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/signup.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/widgets/CustomTextField.dart';
 
 import '../../../core/utils/widgets/app_color.dart';
 
@@ -87,16 +88,9 @@ class _LoginPageState extends State<LoginPage> {
                                     SizedBox(
                                       height: 10,
                                     ),
-                                    TextField(
-                                      decoration: InputDecoration(
-                                        labelText: 'Enter your email',
-                                        filled: true,
-                                        fillColor: AppColor.buttonColor,
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                      ),
+                                    CustomTextField(
+                                      hintText: "Enter your email",
+                                      keyboardType: TextInputType.emailAddress,
                                     ),
                                     SizedBox(
                                       height: 10,
@@ -110,16 +104,9 @@ class _LoginPageState extends State<LoginPage> {
                                     SizedBox(
                                       height: 10,
                                     ),
-                                    TextField(
+                                    CustomTextField(
+                                      hintText: "enter your password",
                                       obscureText: true,
-                                      decoration: InputDecoration(
-                                        filled: true,
-                                        fillColor: AppColor.buttonColor,
-                                        border: OutlineInputBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                        ),
-                                      ),
                                     ),
                                     SizedBox(
                                       height: 20,

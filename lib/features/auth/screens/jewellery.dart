@@ -4,6 +4,7 @@ import 'package:kaiyin_kalaigal/features/auth/screens/product%20description.dart
 import 'package:kaiyin_kalaigal/features/auth/screens/profile.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/widgets/AppBar.dart';
 import 'package:kaiyin_kalaigal/features/auth/screens/widgets/BottomNavigationBar.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/widgets/secondappbar.dart';
 
 
 import '../../../core/utils/widgets/app_color.dart';
@@ -102,43 +103,7 @@ class _JewelleryState extends State<Jewellery> {
                 ],
               ),
             ),
-            Container(
-              height: 66,
-              width: double.infinity,
-              color: AppColor.appMainColor,
-              child: Align(
-                alignment: Alignment.center,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        size: 30,
-                        color: AppColor.whiteColor,
-                      ),
-                      onPressed: () {},
-                    ),
-                    Text(
-                      "All",
-                      style:
-                          TextStyle(fontSize: 20, color: AppColor.whiteColor),
-                    ),
-                    Text(
-                      "BEST SELLER",
-                      style:
-                          TextStyle(fontSize: 20, color: AppColor.whiteColor),
-                    ),
-                    Text(
-                      "NEW ARRIVALS",
-                      style:
-                          TextStyle(fontSize: 20, color: AppColor.whiteColor),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            secondappbar(),
             SizedBox(
               height: 10,
             ),

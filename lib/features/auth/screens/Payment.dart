@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kaiyin_kalaigal/features/auth/screens/widgets/CustomTextField.dart';
 
 import '../../../core/utils/widgets/app_color.dart';
 import 'Payment Successfull.dart';
@@ -34,7 +35,16 @@ class _PaymentState extends State<Payment> {
                     children: [
                       SizedBox(width: 40),
                       Text(
-                        "Kaiyin Kalaigal",
+                        "Kaiyin",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: AppColor.buttonColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        "Kalaigal",
                         style: TextStyle(
                           fontSize: 20,
                           color: AppColor.whiteColor,
@@ -46,7 +56,7 @@ class _PaymentState extends State<Payment> {
                         height: 90,
                         width: 80,
                         child: Image.asset(
-                          "assets/images/ordersummarylogo.png",
+                          "assets/images/white logo.png",
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -137,14 +147,8 @@ class _PaymentState extends State<Payment> {
                           SizedBox(height: 10),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: AppColor.buttonColor,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
+                            child: CustomTextField(
+                              hintText: "",
                             ),
                           ),
                           SizedBox(height: 20),
@@ -162,15 +166,9 @@ class _PaymentState extends State<Payment> {
                           SizedBox(height: 10),
                           Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: AppColor.buttonColor,
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10.0),
-                                ),
-                              ),
-                            ),
+                            child: CustomTextField(
+                              hintText: "",
+                            obscureText: true,),
                           ),
                           SizedBox(height: 20),
                           Row(
@@ -197,16 +195,8 @@ class _PaymentState extends State<Payment> {
                                 padding: EdgeInsets.symmetric(horizontal: 20),
                                 child: SizedBox(
                                   width: 120,
-                                  child: TextField(
-                                    decoration: InputDecoration(
-                                      hintText: "MM/YYYY",
-                                      filled: true,
-                                      fillColor: AppColor.buttonColor,
-                                      border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                    ),
+                                  child: CustomTextField(
+                                    hintText: "MM/YY",
                                   ),
                                 ),
                               ),
@@ -217,17 +207,9 @@ class _PaymentState extends State<Payment> {
                                 padding: EdgeInsets.symmetric(horizontal: 20),
                                 child: SizedBox(
                                   width: 100,
-                                  child: TextField(
+                                  child: CustomTextField(
+                                    hintText: "",
                                     obscureText: true,
-                                    keyboardType: TextInputType.number,
-                                    decoration: InputDecoration(
-                                      filled: true,
-                                      fillColor: AppColor.buttonColor,
-                                      border: OutlineInputBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                    ),
                                   ),
                                 ),
                               ),

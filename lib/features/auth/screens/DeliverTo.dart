@@ -32,7 +32,16 @@ class _DeliverToState extends State<DeliverTo> {
                     children: [
                       SizedBox(width: 40),
                       Text(
-                        "Kaiyin Kalaigal",
+                        "Kaiyin",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: AppColor.buttonColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        "Kalaigal",
                         style: TextStyle(
                           fontSize: 20,
                           color: AppColor.whiteColor,
@@ -44,7 +53,7 @@ class _DeliverToState extends State<DeliverTo> {
                         height: 90,
                         width: 80,
                         child: Image.asset(
-                          "assets/images/ordersummarylogo.png",
+                          "assets/images/white logo.png",
                           fit: BoxFit.cover,
                         ),
                       ),
